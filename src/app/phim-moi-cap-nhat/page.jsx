@@ -1,5 +1,6 @@
 import CardMovie from "@/components/template/CardMovie";
 import BreadCrumb from "@/components/template/BreadCrumb";
+import AdSenseAd from "@/components/template/AdSenseAd";
 
 const fetchNewMovieUpdate = async (api, page) => {
   try {
@@ -39,6 +40,7 @@ const TheLoai = async ({ searchParams }) => {
   const urlImage = null;
   return (
     <>
+      <AdSenseAd />
       <BreadCrumb breadCrumbs={breadCrumb} />
       <CardMovie
         movies={movies || []}

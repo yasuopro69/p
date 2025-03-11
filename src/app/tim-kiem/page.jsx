@@ -2,7 +2,7 @@
 import Movie from "@/components/template/movie";
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-
+import AdSenseAd from "@/components/template/AdSenseAd";
 const useDebounce = (value, delay) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
@@ -34,7 +34,7 @@ const Page = () => {
   const debouncedKeyword = useDebounce(keyword, 500);
 
   const search = useCallback(async (keyword) => {
-    if (!keyword.trim()) return; 
+    if (!keyword.trim()) return;
 
     setLoading(true);
     setAlert("");
@@ -84,47 +84,50 @@ const Page = () => {
   };
 
   return (
-    <div style={{ minHeight: "100vh" }}>
-      <div className="mb-5">
-        <h3 className="text-warning">
-          Nội dung tìm kiếm &quot;{keyword}&quot;
-        </h3>
-      </div>
-      <div className="mb-5">
-        <input
-          type="search"
-          onChange={handleSearchChange}
-          className="form-control"
-          placeholder="Nhập tên phim bạn muốn tìm...."
-          value={keyword}
-          style={{
-            borderRadius: "20px",
-            padding: "20px 20px",
-          }}
-        />
-      </div>
+    <>
+      <AdSenseAd />
+      <div style={{ minHeight: "100vh" }}>
+        <div className="mb-5">
+          <h3 className="text-warning">
+            Nội dung tìm kiếm &quot;{keyword}&quot;
+          </h3>
+        </div>
+        <div className="mb-5">
+          <input
+            type="search"
+            onChange={handleSearchChange}
+            className="form-control"
+            placeholder="Nhập tên phim bạn muốn tìm...."
+            value={keyword}
+            style={{
+              borderRadius: "20px",
+              padding: "20px 20px",
+            }}
+          />
+        </div>
 
-      {loading ? (
-        <div className="text-center py-10">
-          <div className="spinner-border text-warning" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
-      ) : alert ? (
-        <div className="text-center text-warning">{alert}</div>
-      ) : (
-        <div>
-          <Movie movies={displayedMovies} domain={img} />
-          {displayedMovies.length < movies.length && (
-            <div className="text-center my-5">
-              <button onClick={handleLoadMore} className="catalog__more">
-                Xem thêm
-              </button>
+        {loading ? (
+          <div className="text-center py-10">
+            <div className="spinner-border text-warning" role="status">
+              <span className="visually-hidden">Loading...</span>
             </div>
-          )}
-        </div>
-      )}
-    </div>
+          </div>
+        ) : alert ? (
+          <div className="text-center text-warning">{alert}</div>
+        ) : (
+          <div>
+            <Movie movies={displayedMovies} domain={img} />
+            {displayedMovies.length < movies.length && (
+              <div className="text-center my-5">
+                <button onClick={handleLoadMore} className="catalog__more">
+                  Xem thêm
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

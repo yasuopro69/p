@@ -1,5 +1,6 @@
 import DanhMucPhim from "@/components/template/danhMuc";
 import Noti from "@/components/page/home/noti";
+import AdSenseAd from "@/components/template/AdSenseAd";
 
 const API_BASE = "https://phimapi.com";
 const API_V1_BASE = `${API_BASE}/v1/api/danh-sach`;
@@ -11,7 +12,7 @@ const fetchMovies = async (url) => {
     return await response.json();
   } catch (error) {
     console.error("API Error:", error);
-    return null; 
+    return null;
   }
 };
 
@@ -48,16 +49,17 @@ const Home = async () => {
 
   return (
     <div>
-      {/* <Noti /> */}
       {categories.map(
         (category, index) =>
           category.data && (
-            <DanhMucPhim
-              key={index}
-              movies={category.data}
-              domain={category.domain}
-              categoryTitle={category.title}
-            />
+            <div key={index}>
+              <AdSenseAd />
+              <DanhMucPhim
+                movies={category.data}
+                domain={category.domain}
+                categoryTitle={category.title}
+              />
+            </div>
           )
       )}
     </div>

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Info from "@/components/page/phim_detail/info";
-
+import AdSenseAd from "@/components/template/AdSenseAd";
 const API_ENDPOINT = process.env.API_CT_PHIM;
 
 const fetchMovieDetails = async (api, slug) => {
@@ -64,7 +64,9 @@ const Phim = async ({ params }) => {
 
   return (
     <>
+      <AdSenseAd />
       <Info data={data} />
+      <AdSenseAd />
     </>
   );
 };

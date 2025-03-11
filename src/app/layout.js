@@ -1,4 +1,3 @@
-require("dotenv").config();
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import { Suspense } from "react";
@@ -6,6 +5,7 @@ import Loading from "./loading";
 import AppHeader from "@/components/layouts/header";
 import AppSearch from "@/components/template/search";
 import AppFooter from "@/components/layouts/footer";
+import AdSenseAd from "@/components/template/AdSenseAd";
 import { ViewTransitions } from "next-view-transitions";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "../assets/css/main.css";
@@ -31,6 +31,15 @@ export default function RootLayout({ children }) {
   return (
     <ViewTransitions>
       <html lang="vi" data-theme="dark">
+        <head>
+          {/* Thêm script Google AdSense */}
+          <Script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9807388431439024"
+            crossOrigin="anonymous"
+          />
+        </head>
+
         <body className="container">
           <Analytics />
           <Suspense fallback={<Loading />}>
@@ -41,6 +50,7 @@ export default function RootLayout({ children }) {
               <GoogleAnalytics gaId="G-2P6NS4S106" />
             </main>
             <AppFooter />
+            <AdSenseAd />
           </Suspense>
 
           <Script

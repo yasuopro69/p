@@ -1,6 +1,6 @@
 import CardMovie from "@/components/template/CardMovie";
 import BreadCrumb from "@/components/template/BreadCrumb";
-
+import AdSenseAd from "@/components/template/AdSenseAd";
 export async function generateMetadata({ params }) {
   const api = process.env.API_CT_QUOC_GIA;
   const post = await fetch(`${api}/${params.slug}`);
@@ -53,6 +53,7 @@ const TheLoai = async ({ params, searchParams }) => {
 
   return (
     <>
+      <AdSenseAd />
       <BreadCrumb breadCrumbs={breadCrumb} />
       <CardMovie
         movies={movies}

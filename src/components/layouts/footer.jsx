@@ -11,7 +11,7 @@ function AppFooter() {
             © {new Date().getFullYear()} code by{" "}
             <a
               className="text-warning"
-              href="http://facebook.com/vudevweb"
+              href="http://facebook.com/vudovn.354"
               target="_blank"
             >
               {process.env.BOSS}
@@ -23,7 +23,7 @@ function AppFooter() {
           <li className="ms-3">
             <a
               className="text-muted fw text-warning"
-              href="https://www.facebook.com/vudevweb"
+              href="https://www.facebook.com/vudovn.354"
               target="_blank"
             >
               <i className="fe fe-facebook"></i>
@@ -32,7 +32,7 @@ function AppFooter() {
           <li className="ms-3">
             <a
               className="text-muted fw text-warning"
-              href="https://t.me/vudevweb"
+              href="https://t.me/vudovn"
               target="_blank"
             >
               <i className="fe fe-message-circle"></i>
@@ -41,7 +41,7 @@ function AppFooter() {
           <li className="ms-3">
             <a
               className="text-muted fw text-warning"
-              href="https://www.instagram.com/vudevweb"
+              href="https://www.instagram.com/_vudovn"
               target="_blank"
             >
               <i className="fe fe-instagram"></i>
