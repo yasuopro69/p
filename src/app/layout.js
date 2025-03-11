@@ -33,11 +33,11 @@ export default function RootLayout({ children }) {
       <html lang="vi" data-theme="dark">
         <head>
           {/* Thêm script Google AdSense */}
-          <Script
+          <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9807388431439024"
-            crossOrigin="anonymous"
-          />
+            crossorigin="anonymous"
+          ></script>
         </head>
 
         <body className="container">
