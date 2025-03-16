@@ -21,6 +21,9 @@ const Noti = () => {
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
+        // sửa lại tên nút oke thành Kê
+        // xóa nút hủy
+        okText="Kê"
       >
         <div className="text-center">
           <div className="w-100 d-flex justify-content-center">
@@ -35,14 +38,14 @@ const Noti = () => {
             </div>
           </div>
           <p className="mt-2">
-            👉 Ủng hộ mình kinh phí để duy trì website nhé!
+            👉 Ủng hộ mình kinh phí để duy trì website nhé! 👈
           </p>
           <p className="mt-2">
             👉 Liên hệ telegram &nbsp;
             <a href="https://t.me/vudevwebChannel" target="_blank">
-              VUDEVWEB
+              VUDOVN
             </a>
-            &nbsp; để yêu cầu phim!
+            &nbsp; để yêu cầu phim! 👈
           </p>
         </div>
       </Modal>

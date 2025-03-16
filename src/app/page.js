@@ -48,6 +48,7 @@ const Home = async () => {
 
   return (
     <div>
+      <Noti />
       {categories.map(
         (category, index) =>
           category.data && (
