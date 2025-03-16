@@ -59,6 +59,10 @@ const AppHeader = () => {
           fetch(API_THE_LOAI).then((res) => res.json()),
           fetch(API_QUOC_GIA).then((res) => res.json()),
         ]);
+        theLoaiRes.splice(
+          theLoaiRes.findIndex((item) => item.slug === "phim-18"),
+          1
+        );
         localStorage.setItem("theLoai", JSON.stringify(theLoaiRes));
         localStorage.setItem("quocGia", JSON.stringify(quocGiaRes));
         setTheLoai(theLoaiRes);
