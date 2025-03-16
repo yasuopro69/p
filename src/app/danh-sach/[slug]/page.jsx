@@ -1,6 +1,5 @@
 import CardMovie from "@/components/template/CardMovie";
 import BreadCrumb from "@/components/template/BreadCrumb";
-import AdSenseAd from "@/components/template/AdSenseAd";
 
 export async function generateMetadata({ params }) {
   const api = process.env.API_DANH_SACH;
@@ -53,7 +52,6 @@ const DanhMuc = async ({ params, searchParams }) => {
 
   return (
     <>
-      <AdSenseAd />
       <BreadCrumb breadCrumbs={breadCrumb} />
       <CardMovie
         movies={movies || []}

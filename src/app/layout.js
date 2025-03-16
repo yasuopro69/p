@@ -5,7 +5,6 @@ import Loading from "./loading";
 import AppHeader from "@/components/layouts/header";
 import AppSearch from "@/components/template/search";
 import AppFooter from "@/components/layouts/footer";
-import AdSenseAd from "@/components/template/AdSenseAd";
 import { ViewTransitions } from "next-view-transitions";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "../assets/css/main.css";
@@ -23,7 +22,7 @@ export const metadata = {
     "https://scontent.fsgn5-6.fna.fbcdn.net/v/t39.30808-1/381271892_805928278202949_6388609339400536337_n.jpg?stp=dst-jpg_p200x200&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YFb859k94L8Q7kNvgEyV2nL&_nc_ht=scontent.fsgn5-6.fna&oh=00_AfAxzB7t6FbhZPtOvgKvxggnMuv_greJ9Ge85i9sJVLKBw&oe=663DB2D2",
   url: "/",
   type: "website",
-  site_name: "Phimmoi",
+  site_name: "Phimmoi-vudovn",
   locale: "vi_VN",
 };
 
@@ -31,15 +30,6 @@ export default function RootLayout({ children }) {
   return (
     <ViewTransitions>
       <html lang="vi" data-theme="dark">
-        <head>
-          {/* Thêm script Google AdSense */}
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9807388431439024"
-            crossorigin="anonymous"
-          ></script>
-        </head>
-
         <body className="container">
           <Analytics />
           <Suspense fallback={<Loading />}>
@@ -50,7 +40,6 @@ export default function RootLayout({ children }) {
               <GoogleAnalytics gaId="G-2P6NS4S106" />
             </main>
             <AppFooter />
-            <AdSenseAd />
           </Suspense>
 
           <Script

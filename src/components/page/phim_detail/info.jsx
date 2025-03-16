@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 // "use client";
-import Image from "next/image";
-import { Link } from 'next-view-transitions'
+import { Link } from "next-view-transitions";
 import { Button } from "antd";
 const Info = ({ data }) => {
   if (!data || !data.movie) {
-    return <div>Error loading movie details.</div>;
+    return <div>Lỗi khi tải dữ liệu phim</div>;
   }
 
   const { movie, episodes } = data;
@@ -153,10 +152,6 @@ const Info = ({ data }) => {
     <div className="card">
       <div className="card-body row">
         <div className="col-12 col-md-3 mb-3 mb-md-0">
-          {/* <div
-            className="position-relative"
-            style={{ width: "100%", height: "450px" }}
-          > */}
           <img
             loading="lazy"
             src={
@@ -165,7 +160,6 @@ const Info = ({ data }) => {
             }
             alt={name || "Poster"}
             className="rounded-2"
-            fill
             style={{ width: "100%", height: "450px" }}
           />
           {/* </div> */}

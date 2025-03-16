@@ -2,7 +2,6 @@
 import Movie from "@/components/template/movie";
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import AdSenseAd from "@/components/template/AdSenseAd";
 const useDebounce = (value, delay) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
@@ -85,7 +84,6 @@ const Page = () => {
 
   return (
     <>
-      <AdSenseAd />
       <div style={{ minHeight: "100vh" }}>
         <div className="mb-5">
           <h3 className="text-warning">

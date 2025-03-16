@@ -1,6 +1,5 @@
 import DanhMucPhim from "@/components/template/danhMuc";
 import Noti from "@/components/page/home/noti";
-import AdSenseAd from "@/components/template/AdSenseAd";
 
 const API_BASE = "https://phimapi.com";
 const API_V1_BASE = `${API_BASE}/v1/api/danh-sach`;
@@ -53,7 +52,6 @@ const Home = async () => {
         (category, index) =>
           category.data && (
             <div key={index}>
-              <AdSenseAd />
               <DanhMucPhim
                 movies={category.data}
                 domain={category.domain}

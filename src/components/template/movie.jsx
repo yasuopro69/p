@@ -2,8 +2,7 @@
 "use client";
 
 import React from "react";
-import { Link } from 'next-view-transitions'
-import Image from "next/image";
+import { Link } from "next-view-transitions";
 
 function Movie({ movies, domain }) {
   return (
@@ -25,7 +24,6 @@ function Movie({ movies, domain }) {
                   width={300}
                   height={280}
                   placeholder="blur"
-                  blurDataURL="https://lh5.googleusercontent.com/proxy/CGWXSjMMd2FLW31MkAwyyg6CTEa5JYhkmoqOjQOmJbdrIKICImHlALT85CBWNPzJ5WdaGavA6OBY9SSO7YMWaQ7om0jHPu8"
                 />
                 <svg
                   width={22}

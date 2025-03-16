@@ -3,7 +3,6 @@
 import React from "react";
 import Slider from "react-slick";
 import { Link } from 'next-view-transitions'
-import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -48,7 +47,6 @@ function DanhMucPhim({ movies = [], categoryTitle = "", domain = "" }) {
             width={300}
             height={280}
             placeholder="blur"
-            blurDataURL="https://lh5.googleusercontent.com/proxy/CGWXSjMMd2FLW31MkAwyyg6CTEa5JYhkmoqOjQOmJbdrIKICImHlALT85CBWNPzJ5WdaGavA6OBY9SSO7YMWaQ7om0jHPu8"
           />
           <svg
             width={22}

@@ -5,7 +5,7 @@ import React from "react";
 import { Link } from 'next-view-transitions'
 import { Pagination } from "antd";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+
 
 const MovieCard = React.memo(({ movie, domain }) => {
   const { slug, poster_url, name } = movie;
@@ -22,7 +22,6 @@ const MovieCard = React.memo(({ movie, domain }) => {
               width={300}
               height={280}
               placeholder="blur"
-              blurDataURL="https://lh5.googleusercontent.com/proxy/CGWXSjMMd2FLW31MkAwyyg6CTEa5JYhkmoqOjQOmJbdrIKICImHlALT85CBWNPzJ5WdaGavA6OBY9SSO7YMWaQ7om0jHPu8"
             />
           </div>
           <svg

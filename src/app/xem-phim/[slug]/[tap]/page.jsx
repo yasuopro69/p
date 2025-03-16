@@ -1,5 +1,4 @@
 import MoviePlayer from "./components/MoviePlayer";
-import AdSenseAd from "@/components/template/AdSenseAd";
 const XemPhim = async ({ params }) => {
   const urlApi = "https://phimapi.com/phim/";
   const slug = params.slug;
@@ -12,7 +11,6 @@ const XemPhim = async ({ params }) => {
 
   return (
     <>
-      <AdSenseAd />
       <MoviePlayer
         initialData={{
           movie: data.movie,
