@@ -1,6 +1,6 @@
 // MoviePlayer.js (Client Component)
 "use client";
-import { Link } from 'next-view-transitions'
+import { Link } from "next-view-transitions";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import ReactPlayer from "react-player";
@@ -89,27 +89,27 @@ const MoviePlayer = ({ initialData, params }) => {
             <span className="text-dark">{item.server_name}</span>
           </div>
           {item.server_data.map((tapVip, i) => (
-            <Button
+            <a
               key={i}
-              type={`${
-                index === serverIndex && tapVip.slug === tapSlug
-                  ? "primary"
-                  : "default"
-              }`}
-              className={`me-3 mb-3`}
+              href={`/xem-phim/${movieData.movie.slug}/${tapVip.slug}?server=${index}`}
+              // className={`btn btn-secondary btn-sm me-3 mb-3 ${
+              //   index === serverIndex && tapVip.slug === tapSlug
+              //     ? "btn-warning"
+              //     : ""
+              // }`}
             >
-              <Link
+              <Button
                 key={i}
-                href={`/xem-phim/${movieData.movie.slug}/${tapVip.slug}?server=${index}`}
-                // className={`btn btn-secondary btn-sm me-3 mb-3 ${
-                //   index === serverIndex && tapVip.slug === tapSlug
-                //     ? "btn-warning"
-                //     : ""
-                // }`}
+                type={`${
+                  index === serverIndex && tapVip.slug === tapSlug
+                    ? "primary"
+                    : "default"
+                }`}
+                className={`me-3 mb-3`}
               >
                 {tapVip.name}
-              </Link>
-            </Button>
+              </Button>
+            </a>
           ))}
         </div>
       ))}
