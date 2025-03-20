@@ -15,7 +15,7 @@ import "../assets/css/owl.carousel.min.css";
 import "../assets/css/custom.css";
 
 export const metadata = {
-  title: "Xem phim online miễn phí",
+  title: "Gin Movies",
   description:
     "Gin Movies ⚡ Phim HD VietSub | Phim Lẻ | Phim Bộ | Phim Chiếu Rạp | Xem phim Online miễn phí",
   imageUrl:
