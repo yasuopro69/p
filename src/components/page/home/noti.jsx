@@ -5,19 +5,26 @@ import { Modal } from "antd";
 
 const Noti = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [isModalOpen, setIsModalOpen] = useState(false); // default closed
 
   useEffect(() => {
     setIsMounted(true);
-    setIsModalOpen(true); 
+    // Remove or comment out this line to avoid showing the modal on mount
+    // setIsModalOpen(true);
   }, []);
 
   const handleOk = () => {
     setIsModalOpen(false);
   };
 
+  // Example function to open modal when a button is clicked
+  const handleShowModal = () => {
+    setIsModalOpen(true);
+  };
+
   return (
     <>
+      <button onClick={handleShowModal}>Show Notification</button>
       {isMounted && (
         <Modal
           title="Thông báo"
@@ -40,7 +47,7 @@ const Noti = () => {
             </p>
             <p className="mt-2">
               👉 Liên hệ telegram &nbsp;
-              <a href="https://t.me/vudevwebChannel" target="_blank">
+              <a href="https://t.me/vudevwebChannel" target="_blank" rel="noreferrer">
                 VUDOVN
               </a>
               &nbsp; để yêu cầu phim! 👈
