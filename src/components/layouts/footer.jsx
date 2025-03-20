@@ -17,7 +17,7 @@ function AppFooter() {
             © {year ? year : "Loading..."} code by{" "}
             <a
               className="text-warning"
-              href="http://facebook.com/vudovn.354"
+              href=""
               target="_blank"
             >
               {process.env.BOSS}
@@ -25,35 +25,6 @@ function AppFooter() {
             , copyright
           </span>
         </div>
-        <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li className="ms-3">
-            <a
-              className="text-muted fw text-warning"
-              href="https://www.facebook.com/vudovn.354"
-              target="_blank"
-            >
-              <i className="fe fe-facebook"></i>
-            </a>
-          </li>
-          <li className="ms-3">
-            <a
-              className="text-muted fw text-warning"
-              href="https://t.me/vudovn"
-              target="_blank"
-            >
-              <i className="fe fe-message-circle"></i>
-            </a>
-          </li>
-          <li className="ms-3">
-            <a
-              className="text-muted fw text-warning"
-              href="https://www.instagram.com/_vudovn"
-              target="_blank"
-            >
-              <i className="fe fe-instagram"></i>
-            </a>
-          </li>
-        </ul>
       </footer>
     </div>
   );
