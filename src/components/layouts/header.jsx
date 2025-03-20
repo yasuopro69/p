@@ -122,13 +122,13 @@ const AppHeader = () => {
       style={{ transition: "0.3s ease-in-out" }}
     >
       <div className="container">
-        {/* {renderLink("/", <span className="navbar-brand me-auto text-warning fw">VUDO</span>)} */}
+        {/* {renderLink("/", <span className="navbar-brand me-auto text-warning fw">Gin Movies</span>)} */}
         <Link
           onClick={() => setCurrentPath("/")}
           className="navbar-brand me-auto text-warning fw"
           href="/"
         >
-          VUDO
+          Gin Movies
         </Link>
         <div
           className="offcanvas offcanvas-end"
@@ -142,7 +142,7 @@ const AppHeader = () => {
                 className="offcanvas-title text-warning fw"
                 id="offcanvasNavbarLabel"
               >
-                VUDO
+                Gin Movies
               </h5>
             </a>
 
