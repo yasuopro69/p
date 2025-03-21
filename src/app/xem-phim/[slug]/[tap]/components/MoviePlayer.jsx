@@ -140,15 +140,6 @@ const MoviePlayer = ({ initialData, params }) => {
           </div>
 
           <hr />
-
-          <div className="mb-4">
-            <div className="text-warning fw mb-2">
-              <strong>
-                <i className="fe fe-hash"></i>Bình luận
-              </strong>
-            </div>
-            <Comment />
-          </div>
         </div>
       </div>
     </div>
