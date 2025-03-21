@@ -1,5 +1,4 @@
 import DanhMucPhim from "@/components/template/danhMuc";
-import Noti from "@/components/page/home/noti";
 
 const API_BASE = "https://phimapi.com";
 const API_V1_BASE = `${API_BASE}/v1/api/danh-sach`;
